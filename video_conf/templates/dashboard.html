@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Conferencing Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Welcome,&#160;{{name}}!</h2>
+        </div>
+        <div class="options">
+            <a class="option" href="{% url 'meeting' %}">New Meeting</a>
+            <a class="option" href="{% url 'join_room' %}">Join Meeting</a>
+            <a class="option" href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
